@@ -1,0 +1,37 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="first_button">Ввод</button>
+    <button id="second_button">Вывод</button>
+    <textarea id="text_area" placeholder="Введите число:"></textarea>
+    <script>
+        let first_button = document.getElementById("first_button");
+        let second_button = document.getElementById("second_button");
+        let text_area = document.getElementById("text_area");
+
+        let massive = [];
+        let peremennaya = 1;
+        let summa = 0;
+
+        first_button.onclick = function() {
+            massive.push(text_area.value);
+        }
+        second_button.onclick = function() {
+            peremennaya = 1 / massive.length;
+            for (let i = 0; i < massive.length; i++) {
+                summa += massive[i] * peremennaya;
+                console.log(summa);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="first_button">Ввод</button>
+    <button id="second_button">Вывод</button>
+    <textarea id="text_area" placeholder="Введите число:"></textarea>
+    <script>
+        let first_button = document.getElementById("first_button");
+        let second_button = document.getElementById("second_button");
+        let text_area = document.getElementById("text_area");
+
+        let massive = [];
+
+        first_button.onclick = function() {
+            massive.push(text_area.value);
+        }
+        second_button.onclick = function() {
+            min = massive[0];
+            max = massive[0];
+            for (let i = 1; i < massive.length; i++) {
+                if (min > massive[i]) {
+                    min = massive[i];
+                }
+                if (max < massive[i]) {
+                    max = massive[i];
+                }
+            }
+            console.log("Самое наименьшее число = " + min + " Самое наибольшее число = " + max);
+            alert("Самое наименьшее число = " + min + " Самое наибольшее число = " + max); // для удобства
+        }
+    </script>
+</body>
+
+</html>
