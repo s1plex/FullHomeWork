@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">input</button>
+    <button id="btn2">output</button>
+    <textarea id="txt1" placeholder=""></textarea>
+    <script>
+        let btn1 = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+        let txt1 = document.getElementById('txt1')
+        let marr = []
+
+        btn1.onclick = function() {
+            marr.push(txt1.value)
+        }
+        btn2.onclick = function() {
+            bubbleSort(marr)
+            enumeration()
+            console.log(marr)
+        }
+
+        function enumeration() {
+            let result = marr.reduce(function(acc, el) {
+                acc[el] = (acc[el] || 0) + 1;
+                return acc;
+            }, {});
+            console.log(result)
+        }
+
+        function bubbleSort(marr) {
+            for (let j = marr.length - 1; j > 0; j--) {
+                for (let i = 0; i < j; i++) {
+                    if (marr[i] > marr[i + 1]) {
+                        let temp = marr[i];
+                        marr[i] = marr[i + 1];
+                        marr[i + 1] = temp;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
