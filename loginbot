@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<textarea id = "name"></textarea>
+	<textarea id = "pass"></textarea>
+	<button onclick="singup()">Sing up</button>
+	<button onclick="login()">Log in</button>
+
+	<script>
+	let names = [];
+  	let pass = [];
+
+  function login() {
+    let uname = document.getElementById("name").value;
+    let passs = document.getElementById("pass").value;
+
+    let per = 0;
+
+	for(let i = 0; i <= names.length && i <= pass.length; i++){
+		if(uname == names[i] && passs == pass[i]){
+			per = 1;
+		}
+	}
+
+    if (per == 1) {
+      alert("Вход одобрен");
+    } else {
+      alert("Вход отклонен");
+    }
+  }
+
+  function singup() {
+    let uname = document.getElementById("name").value;
+    let passы = document.getElementById("pass").value;
+
+    let nameTaken = names.includes(uname);
+
+    if (!nameTaken) {
+      names.push(uname);
+      pass.push(passы);
+      alert("Регистрация завершена");
+    } 
+	else {
+        alert("Регистрация не завершена");
+    }
+  }
+	</script>
+</body>
+</html>
