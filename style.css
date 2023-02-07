@@ -1,0 +1,87 @@
+.left{
+    width: 50px;
+    margin: 0;
+}
+.right{
+    width: 50px;
+    margin: 0;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+}
+.main{
+    display: flex;
+}
+.center{
+    height: 250px;
+    width: 207px;
+}
+.teamA {
+    display: flex;
+    height: 100px;
+    width: 100px;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    border: 2px solid black;
+
+}
+.teamB {
+    display: flex;
+    height: 100px;
+    width: 100px;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    border: 2px solid black;
+    
+}
+.teams{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.player{
+    margin: 0;
+    height: 33px;
+    padding-left: 5px;
+    width: 45%;
+}
+.main_score{
+    display: flex;
+    height: 147px;
+}
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 5px;
+    width: 103px;
+    margin: 0;
+}
+.menu{
+    margin-top: 25px;
+    display: none;
+    flex-wrap:wrap;
+    width:1000px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction:row;
+    margin-left: 200px;
+    color: #36393f;
+    background-color: #9bbcff;
+}
+.bests{
+    display: flex;
+    flex-wrap:wrap;
+    font-size: 20px;
+    width: 500px;
+    height: 250px;
+}
